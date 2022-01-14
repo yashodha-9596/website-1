@@ -32,18 +32,15 @@
         // here our table name is college
         $sql = "INSERT INTO volanteer  VALUES ('$firstname','$lastname','$gender','$email','$number','$address',$receipt)";
           
-        if(mysqli_query($conn, $sql)){
+        if(pg_query($conn, $sql)){
             echo "data stored in a database successfully." ;
-                
-  
             
         } else{
-            echo ("ERROR: Hush! Sorry . " 
-                . mysqli_error($conn));
+            echo ("ERROR: Hush! Sorry . ");
         }
           
         // Close connection
-        mysqli_close($conn);
+        pg_close($conn);
         ?>
     </center>
 </body>
