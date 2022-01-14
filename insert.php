@@ -9,11 +9,7 @@
     <center>
         <?php
   
-      $servername = "us-cdbr-east-05.cleardb.net";
-      $username = "b50bc7c5dabbc7";
-      $password = "12838e21";
-      $databasename ="heroku_9bf96b83611db46";
-        $conn = mysqli_connect($servername,$username , $password,$databasename );
+    $conn = pg_connect(getenv("DATABASE_URL"));
           
         // Check connection
         if($conn === false){
