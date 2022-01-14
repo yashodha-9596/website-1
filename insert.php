@@ -32,7 +32,7 @@
         // here our table name is college
         $sql = "INSERT INTO volanteer  VALUES ('$firstname','$lastname','$gender','$email','$number','$address',$receipt)";
           
-        if(pg_query($conn, $sql): PgSql\Result|false){
+        if(pg_query($conn, $sql)){
             echo "data stored in a database successfully." ;
             
         } else{
